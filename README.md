@@ -64,7 +64,7 @@ This initially caught me out as it is a different installer to the ArcGIS Deskto
 
 7. Open the ImportPSV2 tool
 
-WARNING: This tool took around 10hrs to run for all of Australia.  Overnight job.
+__WARNING: This tool took around 10hrs to run for all of Australia.  Overnight job.__
 
 #### Input Parameters
 * Enter path to the GNAF ZIP file containing the PSV files
@@ -73,7 +73,7 @@ WARNING: This tool took around 10hrs to run for all of Australia.  Overnight job
 
 ![ImportPSV2 tool](/img/ImportPSV2_RunTool.png?raw=true "ImportPSV2 tool")
 
-> _Did you encounter 'A fatal error has occurred' / 'Translation Failed'?_
+> __Did you encounter 'A fatal error has occurred' / 'Translation Failed'?__
 > 
 > Do you have ArcGIS Server/Enterprise installed on your machine?
 > 
