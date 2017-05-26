@@ -26,7 +26,11 @@ Also worth pointing out that the [ArcGIS Online World GeoCode Service](https://d
 
 ### The Goal
 
-Hoping that if others make use of this, (in particular the address locator style), we can make improvements to this project and build on this over time.  Please fork and recontribute any improvements you make! Please feel free to raise issues and enhancements.  Longer term some goals I want to look at accomplishing include:
+If others find these tools useful, I am hoping that we can make improvements to this project and build on it over time.  
+* Please fork and recontribute any improvements you make!
+* Please feel free to raise issues and enhancements.
+
+Longer term some goals I want to look at accomplishing include:
 
 * Automating the process of downloading updates from data.gov.au and updating the address locator (and a geocode service published from the locator)
 * Investigating using python instead of a reliance on the Data Interop extension.
