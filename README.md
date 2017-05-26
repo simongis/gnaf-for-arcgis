@@ -60,8 +60,10 @@ This initially caught me out as it is a different installer to the ArcGIS Deskto
 
 ### Running the Data Prep Tools
 
+7. Try running the tool 
+
 > Do you have ArcGIS Server/Enterprise installed on your machine?
-> There appears to be a bug when trying to run some of the Data Interop tools on a machine that has ArcGIS Server installed.  An [issue](https://geonet.esri.com/thread/185929-etl-sketchup-to-feature-class) with multiple versions of python clashing.  Workaround is to either unintall ArcGIS Server or simply run the tools from the Workbench  
+> There appears to be a bug when trying to run some of the Data Interop tools on a machine that has ArcGIS Server installed.  An [issue](https://geonet.esri.com/thread/185929-etl-sketchup-to-feature-class) with multiple versions of python clashing.  Workaround is to either unintall ArcGIS Server or simply run the tools from the Workbench.  
 
 
 7. Running the ImportPSV2 tool
