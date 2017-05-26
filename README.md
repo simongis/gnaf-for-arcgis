@@ -1,16 +1,16 @@
-## G-NAF for ArcGIS
+# G-NAF for ArcGIS
 
 The Geocoded National Address File (referred to as G-NAF) is Australia’s authoritative, geocoded address file.  This has been made available as [Open Data on data.gov.au](https://data.gov.au/dataset/geocoded-national-address-file-g-naf) as a series of PSV files. 
 
 Bruce Harold has provided some tools to help convert this raw data into an [Esri Address Locator](http://pro.arcgis.com/en/pro-app/help/data/geocoding/create-a-locator.htm).  I realised I had little experience building an Address Locator from scratch, so have been running through the process to better understand how they work.  As a result, I have put together this wiki to help others who might want to build their own address locator from G-NAF.
 
-### I don't care how you did it, where is the actual Address Locator?
+## I don't care how you did it, where is the actual Address Locator?
 
 Here is a link to the compiled Locator, but be aware that I will not be keeping this up to date with the quarterly updates made to the G-NAF dataset and also please read the disclaimer below.
 
 LOCATOR LINK INCLUDING DATE CREATED
 
-### The Disclaimer
+## The Disclaimer
 
 This has been a self-learning experience to better understand the G-NAF data along with building an Esri Address.  I have not spent hours checking through the quality of the output.  At the time of writing, this is just looking at G-NAF data, and does not incorporate other data sources such as placenames, business names, other PSMA admin boundaries, etc. 
 
@@ -24,11 +24,11 @@ If you want an Australian geocoder that has had significantly more effort and te
 
 Also worth pointing out that the [ArcGIS Online World GeoCode Service](https://developers.arcgis.com/rest/geocode/api-reference/overview-world-geocoding-service.htm) includes G-NAF data, but will only get updates around once every year or so. 
 
-### The Goal
+## The Goal
 
 If others find these tools useful, I am hoping that we can make improvements to this project and build on it over time.  
 * Please fork and recontribute any improvements you make!
-* Please feel free to raise issues and enhancements.
+* Please feel free to raise issues and enhancements or areas in the Wiki that needed more explanation.
 
 Longer term some goals I want to look at accomplishing include:
 
@@ -36,4 +36,32 @@ Longer term some goals I want to look at accomplishing include:
 * Investigating using python instead of a reliance on the Data Interop extension.
 * Including other open data layers to build a more robust composite locator (e.g. PSMA boundaries, Geonames, etc.)
 
-### Steps to build the locator
+## Steps to build the locator
+
+### Initial Setup
+
+1. Download [Bruce's tools from ArcGIS Online](http://www.arcgis.com/home/item.html?id=5bdf6c128c344b3ca7aea24e68fa32e1)
+
+2. Download the latest [PSMA GNAF PSV files](http://data.gov.au/dataset/geocoded-national-address-file-g-naf/resource/99b44dff-4e84-4cb7-9cbf-a68d3ebf964a)
+
+3. Make sure you have the Data Interop for ArcGIS Pro installed and licensed.
+
+This initially caught me out as it is a different installer to the ArcGIS Desktop Data Interop installer)
+
+![Add Remove Programs](/img/ArcGIS_Pro_DI_LicenseCheck.jpg?raw=true "Add Remove Programs")
+
+4. Create a new ArcGIS Pro Project, add a folder connection to where you downloaded the tools from #1
+
+5. Open the toolbox, and for each tool, right click and properties, and update the workspace path to match the FMW folder that is included in the download
+
+![Update filepath references](/img/UpdateReferencesInToolbox.png?raw=true "Update filepath references")
+
+6. Save Project
+
+### Running the Data Prep Tools
+
+> Do you have ArcGIS Server/Enterprise installed on your machine?
+> There appears to be a bug when trying to run some of the Data Interop tools on a machine that has ArcGIS Server installed.  An [issue](https://geonet.esri.com/thread/185929-etl-sketchup-to-feature-class) with multiple versions of python clashing.  Workaround is to either unintall ArcGIS Server or simply run the tools from the Workbench  
+
+
+7. Running the ImportPSV2 tool
