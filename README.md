@@ -52,7 +52,9 @@ This initially caught me out as it is a different installer to the ArcGIS Deskto
 
 4. Create a new ArcGIS Pro Project, add a folder connection to where you downloaded the tools from #1
 
-5. Open the toolbox, and for each tool, right click and properties, and update the workspace path to match the FMW folder that is included in the download
+![Add Folder Connection](/img/AddFolderConnection.png?raw=true "Add Folder Connection")
+
+5. Open the toolbox, and for *each tool*, right click and properties, and update the workspace path to match the FMW folder that is included in the download
 
 ![Update filepath references](/img/UpdateReferencesInToolbox.png?raw=true "Update filepath references")
 
@@ -60,7 +62,9 @@ This initially caught me out as it is a different installer to the ArcGIS Deskto
 
 ### Running the Data Prep Tools
 
-7. Try running the tool 
+7. Open the ImportPSV2 tool
+
+
 
 > Do you have ArcGIS Server/Enterprise installed on your machine?
 > There appears to be a bug when trying to run some of the Data Interop tools on a machine that has ArcGIS Server installed.  An [issue](https://geonet.esri.com/thread/185929-etl-sketchup-to-feature-class) with multiple versions of python clashing.  Workaround is to either unintall ArcGIS Server or simply run the tools from the Workbench.  
