@@ -13,7 +13,7 @@
          with subaddress support and localised field naming. -->
     <!-- Majority of of the hard work has been done by Bruce Harold at Esri -->
 	<!-- Have opened up this address locator with the intent that we can tailor it further for Australia -->
-	<!-- Please refer to the terms of use, ToDo list, and the wiki located at https://jakc.github.io/gnaf-for-arcgis/-->
+	<!-- Please refer to the terms of use, ToDo list, and the wiki located at https://simongis.github.io/gnaf-for-arcgis/-->
     <!-- Feel free to raise issues/enhancements on the github repo -->
     <!-- The input field names and their grammar references. The caption is used as the display label -->
     <!--for the input field. The recognized_name tag contains the preferred field name for the input field -->
