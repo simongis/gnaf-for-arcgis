@@ -77,8 +77,7 @@ WARNING: This tool took around 10hrs to run for all of Australia.  Overnight job
 > 
 > Do you have ArcGIS Server/Enterprise installed on your machine?
 > 
-> There appears to be a bug when trying to run some of the Data Interop tools on a machine that has ArcGIS Server installed.  
-> An [issue](https://geonet.esri.com/thread/185929-etl-sketchup-to-feature-class) with multiple versions of python clashing.  
+> There appears to be a bug when trying to run some of the Data Interop tools on a machine that has ArcGIS Server installed.  An [issue](https://geonet.esri.com/thread/185929-etl-sketchup-to-feature-class) with multiple versions of python clashing.
 > 
 > One Workaround is to either unintall ArcGIS Server or run all of the tools from a machine that does not have ArcGIS Server installed
 >
