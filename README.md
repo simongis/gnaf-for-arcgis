@@ -52,7 +52,9 @@ This initially caught me out as it is a different installer to the ArcGIS Deskto
 
 4. Create a new ArcGIS Pro Project, add a folder connection to where you downloaded the tools from #1
 
-5. Open the toolbox, and for each tool, right click and properties, and update the workspace path to match the FMW folder that is included in the download
+![Add Folder Connection](/img/AddFolderConnection.png?raw=true "Add Folder Connection")
+
+5. Open the toolbox, and for *each tool*, right click and properties, and update the workspace path to match the FMW folder that is included in the download
 
 ![Update filepath references](/img/UpdateReferencesInToolbox.png?raw=true "Update filepath references")
 
@@ -60,8 +62,43 @@ This initially caught me out as it is a different installer to the ArcGIS Deskto
 
 ### Running the Data Prep Tools
 
+7. Open the ImportPSV2 tool
+
+__WARNING: This tool took around 10hrs to run for all of Australia.  Overnight job.__
+
+#### Input Parameters
+* Enter path to the GNAF ZIP file containing the PSV files
+* Create an output folder and point the Destination UnZIP folder to this output folder location
+* Point the tool to a destination file Geodatabase.  You can use the default geodatabase for your ArcGIS Pro project.
+
+![ImportPSV2 tool](/img/ImportPSV2_RunTool.png?raw=true "ImportPSV2 tool")
+
+> __Did you encounter 'A fatal error has occurred' / 'Translation Failed'?__
+> 
 > Do you have ArcGIS Server/Enterprise installed on your machine?
-> There appears to be a bug when trying to run some of the Data Interop tools on a machine that has ArcGIS Server installed.  An [issue](https://geonet.esri.com/thread/185929-etl-sketchup-to-feature-class) with multiple versions of python clashing.  Workaround is to either unintall ArcGIS Server or simply run the tools from the Workbench  
+> 
+> There appears to be a bug when trying to run some of the Data Interop tools on a machine that has ArcGIS Server installed.  An [issue](https://geonet.esri.com/thread/185929-etl-sketchup-to-feature-class) with multiple versions of python clashing.
+> 
+> One Workaround is to either unintall ArcGIS Server or run all of the tools from a machine that does not have ArcGIS Server installed
+>
+> Another Workaround is to open the tools from their workbench and running them from there. Steps outlined below. 
 
+##### WORKAROUND: Running the tools from Workbench
 
-7. Running the ImportPSV2 tool
+This same process will apply for all of the Spatial ETL tools supplied in the tools provided by Bruce
+
+* Right click the ImportPSV2 tool and hit _Edit_
+
+![Open in workbench](/img/OpenToolFromWB.png?raw=true "Open in workbench")
+
+* Run the tool from workbench (hit the execute button)
+
+I found this was also a better approach to understand the progress of how the tools are running and get a better understanding of the data manipulation the tools are performning.
+
+![Run in workbench](/img/ImportPSV2.png?raw=true "Run in workbench")
+
+If you are running the tools in workbench, ensure you update the published parameters before clicking run.
+
+Either way, running from either the tool within ArcGIS Pro, or from the Workbench - check that the tool runs succesfuly and you should end up with the following output in your destination geodatabase:
+
+![Success](/img/Success_ImportPSV2.png?raw=true "Success")
