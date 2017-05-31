@@ -97,6 +97,8 @@ I found this was also a better approach to understand the progress of how the to
 
 ![Run in workbench](/img/ImportPSV2.png?raw=true "Run in workbench")
 
+If you are running the tools in workbench, ensure you update the published parameters before clicking run.
+
 Either way, running from either the tool within ArcGIS Pro, or from the Workbench - check that the tool runs succesfuly and you should end up with the following output in your destination geodatabase:
 
 ![Success](/img/Success_ImportPSV2.png?raw=true "Success")
